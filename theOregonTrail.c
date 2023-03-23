@@ -8,8 +8,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void userOccupation () {
+int userOccupation () {
 	int occupation;
+	int money;
 
 	printf("Before you start the trail you must choose an occupation: \n1. Farmer\n2. Banker\n3. Carpenter \nWhat occupation would you like to choose? ");
 	scanf("%d", &occupation);
@@ -24,7 +25,20 @@ void userOccupation () {
 		case 3:
 			printf("You have chosen carpenter.\n");
 			break;
+		default:
+			printf("Invalid number selection. You are now a farmer.\n");
+			occupation = 1;
 	}
+	if (occupation == 1) {
+		money = 500;
+	}
+	else if (occupation == 2) {
+		money = 1500;
+	}
+	else {
+		money = 1000;
+	}
+	return money;
 }
 
 struct family {
@@ -33,34 +47,39 @@ struct family {
 };
 
 int main () {
-	int memHealth = 100;
 	int day = 1;
 	char start;
 	int memNum;
 	struct family partyMember[4];
-	
+	int money;
+	int totalMoney = 0;
+
 	printf("WELCOME TO THE OREGON TRAIL!\n\n");
 	
 	printf("Press 'y' to start:");
 	scanf(" %c", &start);
 
 	while (start == 'y') {
-		userOccupation();
+		money = userOccupation();
 		printf("Before you start the trail, you must name your party members.\n");
 		
-		for (memNum = 1; memNum < 4; memNum++) {
-			printf("Party member %d: ", memNum);
+		for (memNum = 0; memNum < 3; memNum++) {
+			printf("Party member %d: ", memNum+1);
 			scanf("%s", partyMember[memNum].name);
-			
+			partyMember[memNum].memHealth = 100;
 			if (strlen(partyMember[memNum].name) > 10) {
 				printf("Character length exceeded. Please try again.\n");
 				memNum--;
 			}
 			
 		}
-		
+	
 		printf("DAY %d\n", day);
-		printf("%d", partyMember[1].memHealth);
+		printf("    NAME   HEALTH\n");
+		for (memNum = 0; memNum < 3; memNum++) {		
+			printf("%10s %5d\n", partyMember[memNum].name, partyMember[memNum].memHealth);
+		}
+		printf("Family funds: %d\n", money);
 	return 0;
 	}
 
