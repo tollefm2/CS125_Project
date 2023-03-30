@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+
 int userOccupation () {
 	int occupation;
 	int money;
@@ -52,7 +53,7 @@ int main () {
 	int memNum;
 	struct family partyMember[4];
 	int money;
-	int totalMoney = 0;
+	int randScenario;
 
 	printf("WELCOME TO THE OREGON TRAIL!\n\n");
 	
@@ -73,14 +74,27 @@ int main () {
 			}
 			
 		}
-	
-		printf("DAY %d\n", day);
-		printf("    NAME   HEALTH\n");
-		for (memNum = 0; memNum < 3; memNum++) {		
-			printf("%10s %5d\n", partyMember[memNum].name, partyMember[memNum].memHealth);
+
+		for (day = 1; day < 11; day++) {	
+			printf("DAY %d\n", day);
+			printf("    NAME   HEALTH\n");
+			
+			for (memNum = 0; memNum < 3; memNum++) {		
+				printf("%10s %5d\n", partyMember[memNum].name, partyMember[memNum].memHealth);
+			}
+			
+			printf("Family funds: %d\n", money);
+			
+			//randScenario = rand()%10+1;
+			
+			scenarioD();
+
+			FILE *f = fopen("randScenario", "w");
+			fprintf(f, "test.");
+			fclose(f);
 		}
-		printf("Family funds: %d\n", money);
-	return 0;
+
+		return 0;
 	}
 
 	return 0;
