@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include <time.h>
 
+<<<<<<< HEAD
 int scenarioD()
+=======
+int main()
+>>>>>>> 166cc42c7dc6cb99916b8e35d8ea609e98fbe04f
 {
 
   int scene;
@@ -82,7 +86,11 @@ int stuckInMud()
         printf("*******\n");
         
         //counts how many days the player will be set back to send back to main
+<<<<<<< HEAD
         day = day + 1;
+=======
+        day = 1;
+>>>>>>> 166cc42c7dc6cb99916b8e35d8ea609e98fbe04f
       
       }
       else
@@ -113,7 +121,11 @@ int stuckInMud()
         printf("*******\n");
       
         //counts how many days the player will be set back to send back to main
+<<<<<<< HEAD
         day = day + 1;
+=======
+        day = 1;
+>>>>>>> 166cc42c7dc6cb99916b8e35d8ea609e98fbe04f
       
       }
       else
@@ -144,7 +156,11 @@ int stuckInMud()
         printf("*******\n");
         
         //counts how many days the player will be set back to send back to main
+<<<<<<< HEAD
         day = day + 1;
+=======
+        day = 1;
+>>>>>>> 166cc42c7dc6cb99916b8e35d8ea609e98fbe04f
       
       }
       else
@@ -212,7 +228,11 @@ int deerCrash()
         printf("*******\n");
         
         //counts how many days the player will be set back to send back to main
+<<<<<<< HEAD
         day = day + 1;
+=======
+        day = 1;
+>>>>>>> 166cc42c7dc6cb99916b8e35d8ea609e98fbe04f
       
       }
       else
@@ -380,12 +400,20 @@ int sadHorse()
   if( horse == 0)
   {
       
+<<<<<<< HEAD
     printf("You have broken the horse's spirit. He needs time to recover from your verbal lashing \n");
+=======
+    printf("You have broken the horse's spirit. He needs time to recover from your verbial lashing \n");
+>>>>>>> 166cc42c7dc6cb99916b8e35d8ea609e98fbe04f
     printf("*Your trip has been delayed by one day* \n");
     printf("*******\n");
     
     //counts how many days the player will be set back to send back to main
+<<<<<<< HEAD
     day = day + 1;
+=======
+    day = 1;
+>>>>>>> 166cc42c7dc6cb99916b8e35d8ea609e98fbe04f
       
   }
   else if( horse == 1)
@@ -408,7 +436,11 @@ int sadHorse()
     printf("*******\n");
     
     //counts how many days the player will be set back to send back to main
+<<<<<<< HEAD
     day = day - 1;
+=======
+    day = -1;
+>>>>>>> 166cc42c7dc6cb99916b8e35d8ea609e98fbe04f
       
   }
     
