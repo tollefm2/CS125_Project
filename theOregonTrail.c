@@ -54,11 +54,12 @@ int main () {
 	int memNum;
 	struct family partyMember[4];
 	int money;
-	int randScenario;
-	
+	int randScenario;	
 	int something = 0;
 	int dayCount;
 	int dayCap = 10;
+
+	FILE *f = fopen("score.txt", "a");
 
 	printf("WELCOME TO THE OREGON TRAIL!\n\n");
 	
@@ -91,14 +92,25 @@ int main () {
 			printf("Family funds: %d\n", money);
 			
 			randScenario = rand()%4+1;
-			
-			dayCount = scenarioD(something);
-			dayCap = dayCap + dayCount;
+			srand(time(NULL));
 
-			FILE *f = fopen("randScenario", "w");
-			fprintf(f, "test.");
-			fclose(f);
+			if (randScenario == 1) {
+				printf("A\n");
+			}
+			else if (randScenario == 2) {
+				printf("B\n");
+			}
+			else if (randScenario == 3) {
+				printf("C\n");
+			}			
+			else {
+				dayCount = scenarioD(something);
+				dayCap = dayCap + dayCount;
+			}
 		}
+
+		fprintf(f, "test.");
+		fclose(f);
 
 		return 0;
 	}
