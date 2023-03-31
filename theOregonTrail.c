@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "oregonTrailHeader.h"
 
 int userOccupation () {
 	int occupation;
@@ -54,6 +55,10 @@ int main () {
 	struct family partyMember[4];
 	int money;
 	int randScenario;
+	
+	int something = 0;
+	int dayCount;
+	int dayCap = 10;
 
 	printf("WELCOME TO THE OREGON TRAIL!\n\n");
 	
@@ -75,8 +80,8 @@ int main () {
 			
 		}
 
-		for (day = 1; day < 11; day++) {	
-			printf("DAY %d\n", day);
+		for (day = 1; day <= dayCap; day++) {	
+			printf("DAY %d out of %d\n", day, dayCap);
 			printf("    NAME   HEALTH\n");
 			
 			for (memNum = 0; memNum < 3; memNum++) {		
@@ -85,9 +90,10 @@ int main () {
 			
 			printf("Family funds: %d\n", money);
 			
-			//randScenario = rand()%10+1;
+			randScenario = rand()%4+1;
 			
-			scenarioD();
+			dayCount = scenarioD(something);
+			dayCap = dayCap + dayCount;
 
 			FILE *f = fopen("randScenario", "w");
 			fprintf(f, "test.");
