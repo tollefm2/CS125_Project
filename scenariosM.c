@@ -3,11 +3,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main()
+int scenariosM(input)
 {
 
   int scene;
-  int input = 0;
   int money;
   int randNumber = 2;
 
@@ -42,7 +41,7 @@ int main()
   
   }
 
-  return 0;
+  return money;
 
 }
 

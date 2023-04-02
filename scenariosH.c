@@ -294,7 +294,7 @@ int stranger()
       
           printf("Eventually, you reach and empty clearing. \n");
           printf("You turn to the man, but he suddenly looks guilty. \n");
-          printf("Suddenly, a bunch of men jump out of the bushes and begin to pouns you to a pulp. \n");
+          printf("Suddenly, a bunch of men jump out of the bushes and begin to pounds you to a pulp. \n");
           printf("You pass out, and wake up hours later to your family calling your name. \n");
           printf("The men are nowhere in sight. \n");
           printf("*One of your family memebers has been injured* \n");

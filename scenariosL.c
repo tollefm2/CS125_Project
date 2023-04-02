@@ -2,11 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 
-int scenariosL()
+int scenariosL(input)
 {
 
   int scene;
-  int input = 0;
   int life;
   int randNumber = 3;
 
