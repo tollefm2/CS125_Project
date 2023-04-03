@@ -1,3 +1,8 @@
+/*****
+*File Name: scenariosH.c
+*Collaborators: Sam Costello, Fjor Robles, Margo Tollefson
+*Purpose: Simulate Oregon Trail type game
+*****/
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
