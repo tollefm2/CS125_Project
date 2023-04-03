@@ -1,3 +1,10 @@
+/*****
+*File Name: scenarios.c
+*Collaborators: Sam Costello, Fjor Robles, Margo Tollefson
+*Main Contributers for this file: Sam Costello
+*Purpose: Holds events that deal with lives
+*****/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
