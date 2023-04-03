@@ -2,7 +2,10 @@
 *File Name: scenariosM.c
 *Collaborators: Sam Costello, Fjor Robles, Margo Tollefson
 *Purpose: Simulate Oregon Trail type game
+*Main Contributers for this file: Sam Costello
+*Purpose: Holds events that deal with money
 *****/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
