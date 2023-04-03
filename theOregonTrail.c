@@ -1,6 +1,7 @@
 /*****
 *File Name: theOregonTrail.c
 *Collaborators: Sam Costello, Fjor Robles, Margo Tollefson
+*Main Contributers for this file: Fjor Robles, Margo Tollefson
 *Purpose: Simulate Oregon Trail type game
 *****/
 
