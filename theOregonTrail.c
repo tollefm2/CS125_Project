@@ -75,7 +75,7 @@ int main () {
 	int deathCheck;	
 
 	//opens high score text file, save information
-	FILE *f = fopen("highScore.txt", "a");
+	FILE *f = fopen("highScore.txt", "a+");
 
 	printf("WELCOME TO THE OREGON TRAIL!\n\n");
 	
@@ -202,11 +202,11 @@ int main () {
 		totalHealth = partyMember[0].memHealth + partyMember[1].memHealth + partyMember[2].memHealth;
 		printf("GAME OVER!\n");
 		printf("Total Days: %d\nFinal Earnings: %d\nTotal Health: %d\n", dayCap, money, totalHealth);
-		finalScore = dayCap + money + totalHealth;
+		finalScore = money + totalHealth - dayCap;
 		printf("Final Score: %d\n", finalScore);
 	
 		//saves score to file
-		fprintf(f, "Total Days: %d\nFinal Earnings: %d\nTotal Health: %d\nFinal Score: %d\n", dayCap, money, totalHealth, finalScore);
+		fprintf(f, "Final Score: %d\n", finalScore);
 		fclose(f);
     return 0;
   }
