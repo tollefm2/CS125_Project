@@ -1,5 +1,5 @@
 /*****
-*File Name: scenarios.c
+*File Name: scenariosL.c
 *Collaborators: Sam Costello, Fjor Robles, Margo Tollefson
 *Main Contributers for this file: Sam Costello
 *Purpose: Holds events that deal with lives
