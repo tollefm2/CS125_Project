@@ -11,6 +11,7 @@
 
 //sets up scenarios
 #include "oregonTrailHeader.h"
+#include "oregonTrailHeader2.h"
 
 //lets user pick occupation
 int userOccupation () {
@@ -76,7 +77,7 @@ int main () {
 	int deathCheck;	
 
 	//opens high score text file, save information
-	FILE *f = fopen("highScore.txt", "a+");
+	//FILE *f = fopen("highScore.txt", "a+");
 
 	printf("WELCOME TO THE OREGON TRAIL!\n\n");
 	
@@ -86,7 +87,11 @@ int main () {
 
 	while (start == 'y') {
 		money = userOccupation();
-		printf("Before you start the trail, you must name your party members.\n");
+   
+   	//opens high score text file, save information
+	  FILE *f = fopen("highScore.txt", "a+");
+		
+    printf("Before you start the trail, you must name your party members.\n");
 		
 		//loops through array of members for naming
 		for (memNum = 0; memNum < 3; memNum++) {
@@ -132,19 +137,18 @@ int main () {
 						//stops while loop, continues to next day
 						deathCheck = 1;
 					}
-				
 					else if  (randHealth == 2 && partyMember[1].memHealth > 0) {
 						partyMember[1].memHealth = partyMember[1].memHealth - healthCount;
 						if (partyMember[1].memHealth <= 0) {
-  	          					partyMember[1].memHealth = 0;
-  	  					}
+              partyMember[1].memHealth = 0;
+            }
 						deathCheck = 1;
 					}
 					else if (randHealth == 3 && partyMember[2].memHealth > 0) {
 						partyMember[2].memHealth = partyMember[2].memHealth - healthCount;
 						if (partyMember[2].memHealth <= 0) {
-                                                	partyMember[2].memHealth = 0;
-                                        	}
+              partyMember[2].memHealth = 0;
+            }
 						deathCheck = 1;
 					}
 				
@@ -162,10 +166,13 @@ int main () {
 				if (life == 1) {
 					//randomly picks member to affect
 					lifePick = rand()%3;
+          while (partyMember[lifePick].memHealth == 0) {
+            lifePick = rand()%3;
+          }
 					partyMember[lifePick].memHealth = 0;
-				}
+ 	 	    }
 				if (life == 2) {
-					partyMember[2].memHealth = 0;
+         partyMember[2].memHealth = 0;
 				}
 			}
 			//money scenario
@@ -187,20 +194,18 @@ int main () {
 				dayCap = dayCap + dayCount;
 			}
 
-		//stops if every character is dead
-		if (partyMember[0].memHealth == 0 && partyMember[1].memHealth == 0 && partyMember[2].memHealth == 0) {
-			printf("GAME OVER!\n");
-        		return 0;
-		}
-      		
-		//scans for user to continue, gives time to read scenarios
-		printf("Continue?: ");
-		scanf(" %c", &start);
-		
-		}
-	
+      //scans for user to continue, gives time to read scenarios
+      printf("Continue?: ");
+      scanf(" %c", &start);
+      
+		  //stops if every character is dead
+		  if (partyMember[0].memHealth == 0 && partyMember[1].memHealth == 0 && partyMember[2].memHealth == 0) {
+        printf("GAME OVER!\n");
+        break;
+		  }
+    }
 		//prints end screen, includes final score
-		totalHealth = partyMember[0].memHealth + partyMember[1].memHealth + partyMember[2].memHealth;
+    totalHealth = partyMember[0].memHealth + partyMember[1].memHealth + partyMember[2].memHealth;
 		printf("GAME OVER!\n");
 		printf("Total Days: %d\nFinal Earnings: %d\nTotal Health: %d\n", dayCap, money, totalHealth);
 		finalScore = money + totalHealth - dayCap;
@@ -209,7 +214,15 @@ int main () {
 		//saves score to file
 		fprintf(f, "Final Score: %d\n", finalScore);
 		fclose(f);
-    return 0;
-  }
-	return 0;
+
+    //allows user to play again
+    printf("Try again?: ");
+    scanf(" %c", &start);
+	}
+
+  //saves score to file
+  //fprintf(f, "Final Score: %d\n", finalScore);
+  //fclose(f);
+  
+  return 0;
 }

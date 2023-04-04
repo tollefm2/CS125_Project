@@ -320,14 +320,11 @@ int stranger()
           printf("Invalid answer, try again \n");
       
         }
+        
       }
-    }
-    else
-    {
-    
-      printf("Invalid answer, try again \n");
       
     }
+  
   }
     
   return health;
