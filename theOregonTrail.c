@@ -194,21 +194,27 @@ int main () {
 				dayCap = dayCap + dayCount;
 			}
 
+      //stops if every character is dead
+		  if (partyMember[0].memHealth == 0 && partyMember[1].memHealth == 0 && partyMember[2].memHealth == 0) {
+        break;
+		  }
       //scans for user to continue, gives time to read scenarios
       printf("Continue?: ");
       scanf(" %c", &start);
-      
-		  //stops if every character is dead
-		  if (partyMember[0].memHealth == 0 && partyMember[1].memHealth == 0 && partyMember[2].memHealth == 0) {
-        printf("GAME OVER!\n");
+      if (start != 'y') {
         break;
-		  }
+      }
+      
+		  /***stops if every character is dead
+		  if (partyMember[0].memHealth == 0 && partyMember[1].memHealth == 0 && partyMember[2].memHealth == 0) {
+        break;
+		  }***/
     }
 		//prints end screen, includes final score
     totalHealth = partyMember[0].memHealth + partyMember[1].memHealth + partyMember[2].memHealth;
 		printf("GAME OVER!\n");
-		printf("Total Days: %d\nFinal Earnings: %d\nTotal Health: %d\n", dayCap, money, totalHealth);
-		finalScore = money + totalHealth - dayCap;
+		printf("Total Days: %d\nFinal Earnings: %d\nTotal Health: %d\n", day, money, totalHealth);
+		finalScore = money + totalHealth - day;
 		printf("Final Score: %d\n", finalScore);
 	
 		//saves score to file
