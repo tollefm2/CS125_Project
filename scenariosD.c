@@ -218,7 +218,7 @@ int deerCrash()
       {
         
         printf("You yank hard on the reigns, swerving off of the path. \n");
-        printf("The wagon slams into a tree, tipping over onto it's side. \n");
+        printf("The wagon slams into a tree, tipping over onto its side. \n");
         printf("Thankfully, no one is hurt. You spend the rest of the day flipping the wagon. \n");
         printf("*Your trip has been delayed by one day* \n");
         printf("*******\n");
@@ -372,7 +372,7 @@ int sadHorse()
     {
       
       printf("You tell the horse that you believe in him and ");
-      printf("whould have never gotten here without him. \n");
+      printf("would have never gotten here without him. \n");
       
       //adds to horse's happiness
       horse = horse + 1;

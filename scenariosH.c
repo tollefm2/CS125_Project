@@ -60,7 +60,7 @@ int dysentery()
 
   printf("You come across a stream and decide to have a drink. \n");
   printf("Turns out the water was contaminated! \n");
-  printf("*One of your family memebers has contracted dysentery* \n");
+  printf("*One of your family members has contracted dysentery* \n");
   
   //determines how much health will be subtracted from family member
   health = 80;
@@ -102,7 +102,7 @@ int bearAttack()
       {
         
         printf("Sadly, you are no match for the bear. \n");
-        printf("*One of your family memebers has been gravely injured* \n");
+        printf("*One of your family members has been gravely injured* \n");
         printf("*******\n");
         
         //determines how much health will be subtracted from family member
@@ -148,7 +148,7 @@ int bearAttack()
       {
       
         printf("The bear manages to catch up with the person it was chasing. \n");
-        printf("*One of your family memebers has been injured* \n");
+        printf("*One of your family members has been injured* \n");
         printf("*******\n");
         
         //determines how much health will be subtracted from family member
@@ -305,7 +305,7 @@ int stranger()
           printf("Suddenly, a bunch of men jump out of the bushes and begin to pounds you to a pulp. \n");
           printf("You pass out, and wake up hours later to your family calling your name. \n");
           printf("The men are nowhere in sight. \n");
-          printf("*One of your family memebers has been injured* \n");
+          printf("*One of your family members has been injured* \n");
           printf("*******\n");
           
           //determines how much health will be subtracted from family member

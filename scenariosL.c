@@ -87,9 +87,9 @@ int flashFlood()
         
         printf("You scramble out of the wagon and into the nearby trees. \n");
         printf("The water crashes through where the wagon is, causing it to tip over. \n");
-        printf("The trees that your family are in in stay strong. \n");
+        printf("The trees that your family are in stay strong. \n");
         printf("You wait for the water to pass by and then climb down. \n");
-        printf("You right the wagon, check your belogings, and leave. \n");
+        printf("You right the wagon, check your belongings, and leave. \n");
         printf("*You continue on the trail* \n");
         printf("*******\n");
         
@@ -103,7 +103,7 @@ int flashFlood()
         printf("You head for the trees, but not everyone makes it in time. \n");
         printf("One of your family memebers is swept away by the current. \n");
         printf("They are never seen again. \n");
-        printf("*You have lost a family memeber* \n");
+        printf("*You have lost a family member* \n");
         printf("*******\n");
         
         //determines if family member has died to pass to main script
@@ -125,9 +125,9 @@ int flashFlood()
         printf("You stay in the wagon and begin to go as fast as you can. \n");
         printf("Despite how hard the horses are working, you can't out run the water. ");
         printf("It crashes into the wagon, tipping it over. \n");
-        printf("One of your family memebers is swept away by the current. \n");
+        printf("One of your family members is swept away by the current. \n");
         printf("They are never seen again. \n");
-        printf("*You have lost a family memeber* \n");
+        printf("*You have lost a family member* \n");
         printf("*******\n");
         
         //determines if family member has died to pass to main script
@@ -209,7 +209,7 @@ int otherFamily()
         printf("When you wake up, you find that your child is missing. \n");
         printf("In the middle of the night, the two of them met up and decided to run away together. \n");
         printf("They didn't want to be around people that didn't support their relationship. \n");
-        printf("*You have lost a family memeber* \n");
+        printf("*You have lost a family member* \n");
         printf("*******\n"); 
         
         //determines if family member has left to pass to main script
@@ -263,7 +263,7 @@ int otherFamily()
         printf("decided that they really do love each other and want to get married. \n");
         printf("You and your spouse tearfully say goodbye to your child as they leave ");
         printf("with the other family. \n");
-        printf("*You have lost a family memeber* \n");
+        printf("*You have lost a family member* \n");
         printf("*******\n");
         
         //determines if family member has left to pass to main script
@@ -287,7 +287,7 @@ int otherFamily()
         printf("You are sad, but happy that you child is happy. \n");
         printf("The next morning, ");
         printf("you say tearful goodbyes and they promise to invite you to the wedding. \n");
-        printf("*You have lost a family memeber* \n");
+        printf("*You have lost a family member* \n");
         printf("*******\n");
         
         //determines if family member has left to pass to main script

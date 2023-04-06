@@ -151,7 +151,6 @@ int main () {
             }
 						deathCheck = 1;
 					}
-				
 				}
 				deathCheck = 0;
 			}
@@ -202,17 +201,19 @@ int main () {
       printf("Continue?: ");
       scanf(" %c", &start);
       if (start != 'y') {
+        printf("You decided to take the L and stopped your journey to Oregon.\n");
         break;
       }
-      
-		  /***stops if every character is dead
-		  if (partyMember[0].memHealth == 0 && partyMember[1].memHealth == 0 && partyMember[2].memHealth == 0) {
-        break;
-		  }***/
     }
 		//prints end screen, includes final score
     totalHealth = partyMember[0].memHealth + partyMember[1].memHealth + partyMember[2].memHealth;
 		printf("GAME OVER!\n");
+    //makes sure math is correct if player decides to end game early
+    day = day - 1;
+    //if day out of dayCap is equal to each other, the player makes it to Oregon
+    if (day == dayCap) {
+      printf("Congrats! You made it to Oregon!\n");
+    }
 		printf("Total Days: %d\nFinal Earnings: %d\nTotal Health: %d\n", day, money, totalHealth);
 		finalScore = money + totalHealth - day;
 		printf("Final Score: %d\n", finalScore);
