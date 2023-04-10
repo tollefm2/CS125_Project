@@ -76,13 +76,10 @@ int main () {
 	int finalScore;
 	int deathCheck;	
 
-	//opens high score text file, save information
-	//FILE *f = fopen("highScore.txt", "a+");
-
 	printf("WELCOME TO THE OREGON TRAIL!\n\n");
 	
 	//initializes game
-	printf("Press 'y' to start:");
+	printf("Press 'y' to start: " );
 	scanf(" %c", &start);
 
 	while (start == 'y') {
@@ -129,7 +126,7 @@ int main () {
 					randHealth = rand()%3+1;
 			
 			 		if (randHealth == 1 && partyMember[0].memHealth > 0) {
-						partyMember[0].memHealth = partyMember[0].memHealth - healthCount;	
+						partyMember[0].memHealth = partyMember[0].memHealth - healthCount;
 						//makes sure member is not already dead
 						if (partyMember[0].memHealth <= 0) {
 							partyMember[0].memHealth = 0;
@@ -225,7 +222,7 @@ int main () {
     //allows user to play again
     printf("Try again?: ");
     scanf(" %c", &start);
-	}
+  }
 
   //saves score to file
   //fprintf(f, "Final Score: %d\n", finalScore);
